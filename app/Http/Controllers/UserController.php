@@ -85,7 +85,7 @@ class UserController extends Controller
         $user = User::find($userid);
         $email = $user->email;
         $name = $user->name;
-        dd('need to remove dd & configer smtp');
+        dd('need to remove dd & configer smtp ');
         Mail::to($email)->send(new TestMail($name));
         return redirect(url( 'index'))->with( 'success', 'Email successfully sent to '. $name);
     }
